@@ -1,0 +1,65 @@
+{
+  "defns": {
+    "scope": "scss",
+    "prefix": "defns",
+    "body": [
+      "@use '/@/styles/var.scss';",
+      "",
+      "\\$prefixCls: #{var.\\$namespace}-$1;",
+      "",
+      ".#{\\$prefixCls} {",
+      "",
+      "}"
+    ],
+    "description": "namespace scss define"
+  },
+  "defapi": {
+    "scope": "typescript",
+    "prefix": "defapi",
+    "body": [
+      "import { defHttp } from '/@/utils/http/axios'",
+      "",
+      "export const Api = {",
+      "  list: '$1',",
+      "  add: '',",
+      "  update: '',",
+      "  delete: '',",
+      "}"
+    ],
+    "description": "permission api define"
+  },
+  "defreq": {
+    "scope": "typescript",
+    "prefix": "defreq",
+    "body": [
+      "export async function $1Request(): Promise<void> {",
+      "  return await defHttp.$2({ url: Api.$3 })",
+      "}"
+    ],
+    "description": "define api request"
+  },
+  "defcol": {
+    "scope": "typescript",
+    "prefix": "defcol",
+    "body": [
+      "import type { TableColumn } from '/@/components/Table'",
+      "",
+      "export function createColumns(): TableColumn[] {",
+      "  return [$1]",
+      "}"
+    ],
+    "description": "define table columns"
+  },
+  "defscm": {
+    "scope": "typescript",
+    "prefix": "defscm",
+    "body": [
+      "import type { FormSchema } from '/@/components/Form'",
+      "",
+      "export function createSchemas(): FormSchema[] {",
+      "  return [$1]",
+      "}"
+    ],
+    "description": "define form schemas"
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh_CN" id="htmlRoot">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title></title>
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <script>
+      ;(function () {
+        var __htmlRoot = document.getElementById('htmlRoot')
+        var __theme = window.localStorage.getItem('__APP_DARK_MODE__')
+        if (__htmlRoot && __theme === 'dark') {
+          __originalCls = __htmlRoot.className.replace(__theme, '')
+          __htmlRoot.className = (__originalCls + ' ' + __theme).trim()
+          __theme = __htmlRoot = null
+        }
+      })()
+    </script>
+    <style type="text/css">
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      html.dark .app-pre-loading {
+        background-color: #27272b;
+      }
+      .app-pre-loading {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+      }
+
+      .app-pre-loading svg {
+        transform: scale(2.5);
+      }
+
+      .app-pre-loading svg polyline {
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .app-pre-loading svg polyline#back {
+        stroke: rgba(110, 123, 242, 0.3);
+      }
+      .app-pre-loading svg polyline#front {
+        stroke: #6e7bf2;
+        stroke-dasharray: 12, 36;
+        stroke-dashoffset: 48;
+        animation: appPreLoadingDash 1s linear infinite;
+      }
+      @-moz-keyframes appPreLoadingDash {
+        62.5% {
+          opacity: 0;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @-webkit-keyframes appPreLoadingDash {
+        62.5% {
+          opacity: 0;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @-o-keyframes appPreLoadingDash {
+        62.5% {
+          opacity: 0;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes appPreLoadingDash {
+        62.5% {
+          opacity: 0;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+    <div id="app">
+      <!-- pre loading -->
+      <div class="app-pre-loading">
+        <svg width="16px" height="12px">
+          <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+          <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+        </svg>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

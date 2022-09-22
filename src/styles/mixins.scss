@@ -1,0 +1,9 @@
+// BEM Source by https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/mixins/mixins.scss
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state} {
+      @content;
+    }
+  }
+}

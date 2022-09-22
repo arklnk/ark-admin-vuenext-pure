@@ -1,0 +1,28 @@
+// bem
+$namespace: 'ark';
+$element-separator: '__';
+$modifier-separator: '--';
+$state-prefix: 'is-';
+
+// layout
+$header-height: 50px;
+$app-bg-color: #f0f2f5;
+$app-dark-bg-color: #2a2c2c;
+
+//basic color
+$color-white: #ffffff;
+$color-black: #000000;
+
+// transition
+$transition-duration: 0.3s;
+
+// css var
+:root {
+  // sidebar bg
+  --sidebar-bg-color: #{$color-white};
+  --sidebar-darken-bg-color: #{$color-white};
+
+  // header
+  --header-bg-color: #{$color-white};
+  --header-hover-bg-color: #{$color-white};
+}
