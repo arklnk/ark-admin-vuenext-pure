@@ -8,11 +8,13 @@ Doc: [https://docs.arklnk.com](https://docs.arklnk.com)
 
 ## Online experience
 
-demo: [http://arkadmin.si-yee.com](http://arkadmin.si-yee.com)
+demo: [http://pure.arkadmin.si-yee.com](http://pure.arkadmin.si-yee.com)
 
 | Account | Password | Remark |
 | ------- | -------- | ------ |
 | demo    | 123456   | demo   |
+
+> The verification code can be entered as many as four digits
 
 - If you need a complete permission background system can be viewed [ark-admin-zero](https://github.com/arklnk/ark-admin-zero)
 

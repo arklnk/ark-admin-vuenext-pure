@@ -14,6 +14,8 @@
 | ---- | ------ | -------- |
 | demo | 123456 | 演示账号 |
 
+> 验证码随便输入4位即可
+
 - 如需完整的权限后台系统可查看[ark-admin-zero](https://github.com/arklnk/ark-admin-zero)
 
 # 欢迎 Star && PR
