@@ -1,7 +1,6 @@
-import { defHttp } from '/@/utils/http/axios'
 import type { Menu } from '/@/router/typing'
 
-const Api = {
+export const Api = {
   login: '/user/login',
   captcha: '/user/login/captcha',
   info: '/user/info',
@@ -21,8 +20,11 @@ interface CaptchaImgResult {
   verifyCode: string
   captchaId: string
 }
-export function getImageCaptcha(params?: CaptchaImgParams) {
-  return defHttp.get<CaptchaImgResult>({ url: Api.captcha, params }, { errorMessageMode: 'none' })
+export function getImageCaptcha(_params?: CaptchaImgParams): Promise<CaptchaImgResult> {
+  return Promise.resolve({
+    verifyCode: 'https://iph.href.lu/100x40',
+    captchaId: '123456',
+  })
 }
 
 interface UserLoginParams {
@@ -34,11 +36,10 @@ interface UserLoginParams {
 interface UserLoginResult {
   token: string
 }
-export function userLogin(data: UserLoginParams): Promise<Nullable<UserLoginResult>> {
-  return defHttp.post<Nullable<UserLoginResult>>(
-    { url: Api.login, data },
-    { errorMessageMode: 'message' }
-  )
+export function userLogin(_data: UserLoginParams): Promise<Nullable<UserLoginResult>> {
+  return Promise.resolve({
+    token: '1234567890',
+  })
 }
 
 interface UserInfoResult {
@@ -46,7 +47,10 @@ interface UserInfoResult {
   avatar: string
 }
 export function getUserInfo(): Promise<UserInfoResult> {
-  return defHttp.get<UserInfoResult>({ url: Api.info })
+  return Promise.resolve({
+    username: 'arklnk',
+    avatar: '',
+  })
 }
 
 interface PermMenuResult {
@@ -54,11 +58,11 @@ interface PermMenuResult {
   menus: Menu[]
 }
 export function getPermAndMenu(): Promise<PermMenuResult> {
-  return defHttp.get<PermMenuResult>({ url: Api.permmenu })
+  return Promise.reject()
 }
 
 export function userLogout(): Promise<void> {
-  return defHttp.post<void>({ url: Api.logout })
+  return Promise.resolve()
 }
 
 interface UserProfileInfoResult {
@@ -71,17 +75,27 @@ interface UserProfileInfoResult {
   username: string
 }
 export function getUserProfileInfo(): Promise<UserProfileInfoResult> {
-  return defHttp.get<UserProfileInfoResult>({ url: Api.profile })
+  return Promise.resolve({
+    avatar: '',
+    email: 'arklnk@163.com',
+    gender: 0,
+    mobile: '',
+    nickname: '',
+    remark: '',
+    username: 'arklnk',
+  })
 }
 
 export function generateAvatar(): Promise<{ avatarUrl: string }> {
-  return defHttp.get({ url: Api.avatar })
+  return Promise.resolve({
+    avatarUrl: '',
+  })
 }
 
-export function updateUserProfile(data: UserProfileInfoResult) {
-  return defHttp.post({ url: Api.update, data })
+export function updateUserProfile(_data: UserProfileInfoResult) {
+  // return defHttp.post({ url: Api.update, data })
 }
 
-export function updateUserPasswd(data: { oldPassword: string; newPassword: string }) {
-  return defHttp.post({ url: Api.passwd, data })
+export function updateUserPasswd(_data: { oldPassword: string; newPassword: string }) {
+  // return defHttp.post({ url: Api.passwd, data })
 }
