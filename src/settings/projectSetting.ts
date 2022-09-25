@@ -21,7 +21,7 @@ const setting: ProjectConfig = {
   themeColor: APP_PRESET_COLOR_LIST[0],
   contentMode: ContentEnum.FULL,
   // 权限路由配置：Back模式为后端动态生成，Role模式为纯前端
-  permissionMode: PermissionModeEnum.BACK,
+  permissionMode: PermissionModeEnum.ROLE,
   removeAllHttpPending: false,
   closeMessageOnSwitch: false,
   openKeepAlive: true,
