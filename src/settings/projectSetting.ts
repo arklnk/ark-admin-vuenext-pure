@@ -1,7 +1,7 @@
 import type { ProjectConfig } from '/#/config'
 
 import { ContentEnum, PermissionModeEnum, RouterTransitionEnum, ThemeEnum } from '/@/enums/appEnum'
-import { MenuModeEnum } from '/@/enums/menuEnum'
+import { MenuModeEnum, MenuTriggerEnum } from '/@/enums/menuEnum'
 import {
   APP_PRESET_COLOR_LIST,
   HEADER_PRESET_BG_COLOR_LIST,
@@ -21,7 +21,7 @@ const setting: ProjectConfig = {
   themeColor: APP_PRESET_COLOR_LIST[0],
   contentMode: ContentEnum.FULL,
   // 权限路由配置：Back模式为后端动态生成，Role模式为纯前端
-  permissionMode: PermissionModeEnum.ROLE,
+  permissionMode: PermissionModeEnum.BACK,
   removeAllHttpPending: false,
   closeMessageOnSwitch: false,
   openKeepAlive: true,
@@ -33,6 +33,7 @@ const setting: ProjectConfig = {
     theme: ThemeEnum.DARK,
     menuMode: MenuModeEnum.SIDEBAR,
     topMenuAlign: 'flex-start',
+    trigger: MenuTriggerEnum.TOP,
   },
   headerSetting: {
     fixed: true,
