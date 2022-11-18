@@ -16,7 +16,7 @@ demo: [http://pure.arkadmin.si-yee.com](http://pure.arkadmin.si-yee.com)
 
 > The verification code can be entered as many as four digits
 
-- If you need a complete permission background system can be viewed [ark-admin-zero](https://github.com/arklnk/ark-admin-zero)
+**If you need a complete permission background system can be viewed [ark-admin-zero](https://github.com/arklnk/ark-admin-zero) or [ark-admin-nest](https://github.com/arklnk/ark-admin-nest)**
 
 # Star && PR
 

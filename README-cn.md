@@ -1,6 +1,6 @@
 ![](https://docs.arklnk.com/images/ark-admin.png)
 
-[English](README.md)| 简体中文
+[English](README.md) | 简体中文
 
 ## 官方文档
 
@@ -16,7 +16,7 @@
 
 > 验证码随便输入4位即可
 
-- 如需完整的权限后台系统可查看[ark-admin-zero](https://github.com/arklnk/ark-admin-zero)
+**如需完整的权限后台系统可查看[ark-admin-zero](https://github.com/arklnk/ark-admin-zero) 或者 [ark-admin-nest](https://github.com/arklnk/ark-admin-nest)**
 
 # 欢迎 Star && PR
 
